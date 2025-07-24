@@ -5,3 +5,7 @@ gradle/*
 gradlew
 gradlew.bat
 test_server/**/*
+bin/**/*
+
+# TEMPORARY
+OLD/**/*
