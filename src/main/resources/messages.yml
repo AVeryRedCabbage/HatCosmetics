@@ -1,4 +1,4 @@
-# HatCosmetics messages version: 3
+# HatCosmetics messages version: ${hatcosmetics_config_version}
 # For both my sake and yours, please DO NOT change the messages version!
 
 # Placeholders:

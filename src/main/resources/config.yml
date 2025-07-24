@@ -1,4 +1,4 @@
-# HatCosmetics config version: 4
+# HatCosmetics config version: ${hatcosmetics_config_version}
 # For both my sake and yours, please DO NOT change the config version!
 
 # Refer to Spigot-API Materials for list of items: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html

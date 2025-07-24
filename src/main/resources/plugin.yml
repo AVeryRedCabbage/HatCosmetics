@@ -1,7 +1,7 @@
-main: me.Tonus_.hatCosmetics.Main
-name: HatCosmetics
-version: 2.1.1
-author: Tonus_
+main: me.Tonus_.hatCosmetics.HatCosmetics
+name: "HatCosmetics"
+version: ${version}
+author: Supermarcel10
 api-version: 1.16
 depend: []
 
