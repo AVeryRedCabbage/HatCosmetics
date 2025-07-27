@@ -3,23 +3,3 @@ name: "HatCosmetics"
 version: ${version}
 author: Supermarcel10
 api-version: 1.16
-depend: []
-
-commands:
-  hatCosmetics:
-    description: Primary command for hats.
-    aliases: [hats]
-
-permissions:
-  hatcosmetics.reload:
-    description: Allows you to reload the plugin's config.
-    default: op
-  hatcosmetics.hat:
-    description: Allows use of hat in permission.
-    default: op
-  hatcosmetics.equip.other:
-    description: Allows sender to equip hat for online player.
-    default: op
-  hatcosmetics.unequip.other:
-    description: Allows sender to unequip hat from online player.
-    default: op
