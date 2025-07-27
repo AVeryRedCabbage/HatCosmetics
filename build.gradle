@@ -133,14 +133,15 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 // TODO: Remove temporary testing setup!
-tasks.register("copyToTestServer", Sync) {
+tasks.register("copyToTestServer", Copy) {
     dependsOn "build"
     mustRunAfter "build"
 
-    def pluginsDir = "${project.projectDir}/test_server/plugins";
+    def pluginsDir = "${project.projectDir}/test_server/plugins"
 
-    doFirst {
-        delete fileTree(pluginsDir) { include "**/*.jar" }
+    delete file("${pluginsDir}/HatCosmetics")
+    delete fileTree(pluginsDir) {
+        include "HatCosmetics*.jar"
     }
 
     from(fileTree(layout.buildDirectory.dir("libs")) {
@@ -155,5 +156,5 @@ tasks.register("runOnTestServer", Exec) {
     mustRunAfter "copyToTestServer"
 
     workingDir "${project.layout.projectDirectory}/test_server/"
-    commandLine "java", "-Xms1G", "-Xmx1G", "-Dpaper.log-level=WARN", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005", "-jar", "paper-1.21.4-232.jar", "--nogui"
+    commandLine "java", "-Xms1G", "-Xmx1G", "-Dpaper.log-level=WARN", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005", "-jar", "paper-1.21.8-11.jar", "--nogui"
 }
